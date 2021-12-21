@@ -16,6 +16,7 @@ code {
     monospace;
 }
 
+/* header */
 .header {
   padding: 0 10px;
   height: 50px;
@@ -36,12 +37,14 @@ code {
 .header-left li,
 .header-right li {
   margin-right: 10px;
+  cursor: pointer;
 }
 
 .header-left li:last-child,
 .header-right li:last-child {
   margin-right: 0;
 }
+/* form */
 
 .form {
   width: 90%;
@@ -69,8 +72,17 @@ code {
   font-size: 15px;
 }
 
-.modal {
+button {
+  cursor: pointer;
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* modal */
+.modal-backDrop {
   position: fixed;
+  z-index: 1000;
   background-color: rgba(0, 0, 0, 0.8);
   top: 0;
   left: 0;
@@ -79,16 +91,32 @@ code {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.4s;
+}
+
+.modal-hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-show {
+  opacity: 1;
+  visibility: visible;
 }
 
 .modal-container {
-  position: relative;
+  position: absolute;
+  z-index: 1500;
   background-color: white;
   height: 250px;
   width: 350px;
   border-radius: 15px;
   padding: 10px;
   box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, 0.1);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
 }
 
 .modal-close {
@@ -117,16 +145,20 @@ code {
 }
 
 /* custom modal class */
-.center .modal-content {
+.center {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.bottom .modal-content {
+.bottom {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* login register  */
+
+.login-register {
+  text-align: center;
 }
