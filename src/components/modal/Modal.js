@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import CloseSVG from '../../assets/close.svg';
 import Register from '../forms/Register';
 
-const Modalcontainer = () => {
+const Modal = () => {
   return (
-    <div className='modal'>
+    <Fragment>
+      <div className='modal-backDrop'></div>
       <div className='modal-container'>
         <div className='modal-close'>
           <img src={CloseSVG} className='modal-close-img' alt='close-modal' />
@@ -13,8 +14,8 @@ const Modalcontainer = () => {
           <Register />
         </div>
       </div>
-    </div>
+    </Fragment>
   );
 };
 
-export default Modalcontainer;
+export default Modal;
