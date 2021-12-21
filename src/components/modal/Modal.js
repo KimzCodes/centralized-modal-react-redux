@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import CloseSVG from '../../assets/close.svg';
-import Register from '../forms/Register';
+import Register from '../forms/LoginRegister';
 
 const Modal = () => {
   return (

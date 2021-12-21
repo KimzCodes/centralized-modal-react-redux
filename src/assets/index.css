@@ -69,7 +69,7 @@ code {
 
 .form button {
   padding: 7px;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 /* modal */
@@ -154,11 +154,24 @@ code {
 
 .login-register {
   text-align: center;
+  font-weight: bold;
 }
 
-.full-read {
+.btn {
   cursor: pointer;
   width: 200px;
   padding: 10px;
-  margin: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+/* article */
+.article {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.article p {
+  margin: 30px 0;
 }

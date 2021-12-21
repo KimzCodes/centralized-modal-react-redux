@@ -11,7 +11,7 @@ const Content = () => {
           since the 1500s, when an unknown printer took a galley not only five
           centuries, but also the leap into electronic typesetting....
         </p>
-        <button className='full-read'>Read full article</button>
+        <button className='btn'>Read full article</button>
       </div>
     </div>
   );
