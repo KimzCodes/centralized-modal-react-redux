@@ -1,6 +1,10 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { openModal } from '../../store/modalSlice';
 
 const Content = () => {
+  const dispatch = useDispatch();
+
   return (
     <div>
       <div className='article'>
@@ -11,7 +15,12 @@ const Content = () => {
           since the 1500s, when an unknown printer took a galley not only five
           centuries, but also the leap into electronic typesetting....
         </p>
-        <button className='btn'>Read full article</button>
+        <button
+          className='btn'
+          onClick={() => dispatch(openModal({ name: 'LoginRegister' }))}
+        >
+          Read full article
+        </button>
       </div>
     </div>
   );

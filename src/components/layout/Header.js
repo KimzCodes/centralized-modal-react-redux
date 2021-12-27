@@ -1,6 +1,10 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { openModal } from '../../store/modalSlice';
 
 const Header = () => {
+  const dispatch = useDispatch();
+
   return (
     <div className='header'>
       <ul className='header-right'>
@@ -9,8 +13,25 @@ const Header = () => {
         <li>Contact us</li>
       </ul>
       <ul className='header-left'>
-        <li>Login</li>
-        <li>Register</li>
+        <li
+          onClick={() =>
+            dispatch(
+              openModal({
+                name: 'Login',
+                childrenProps: { name: 'kareem', email: 'kareem@gmail.com' },
+              })
+            )
+          }
+        >
+          Login
+        </li>
+        <li
+          onClick={() =>
+            dispatch(openModal({ name: 'Register', position: 'bottom' }))
+          }
+        >
+          Register
+        </li>
       </ul>
     </div>
   );

@@ -1,10 +1,10 @@
 import Header from './components/layout/Header';
 import Content from './components/layout/Content';
-import Modal from './components/layout/modal/Modal';
+import ModalManger from './components/util/ModalManger';
 function App() {
   return (
     <div>
-      <Modal />
+      <ModalManger />
       <Header />
       <Content />
     </div>

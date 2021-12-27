@@ -1,17 +1,27 @@
 import React, { Fragment } from 'react';
-import CloseSVG from '../../../assets/close.svg';
 
+import CloseSVG from '../../../assets/close.svg';
 import './modal.css';
 
-const Modal = () => {
+const Modal = ({ children, isOpen, closeModalHandler, modalChildPosition }) => {
   return (
     <Fragment>
-      <div className='modal-backDrop'></div>
-      <div className='modal-container'>
+      <div
+        onClick={closeModalHandler}
+        className={`modal-backDrop ${isOpen ? 'modal-show' : 'modal-hide'}`}
+      ></div>
+      <div
+        className={`modal-container ${isOpen ? 'modal-show' : 'modal-hide'}`}
+      >
         <div className='modal-close'>
-          <img src={CloseSVG} className='modal-close-img' alt='close-modal' />
+          <img
+            src={CloseSVG}
+            className='modal-close-img'
+            alt='close-modal'
+            onClick={closeModalHandler}
+          />
         </div>
-        <div className='modal-content'></div>
+        <div className={`modal-content ${modalChildPosition}`}>{children}</div>
       </div>
     </Fragment>
   );
